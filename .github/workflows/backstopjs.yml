@@ -1,0 +1,14 @@
+name: Update version tag
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  actions-tagger:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: andstor/backstopjs-action@master
+        with:
+          command: test
+      - run: ls backstop_data
