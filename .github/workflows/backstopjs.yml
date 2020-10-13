@@ -1,8 +1,9 @@
 name: Update version tag
 
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - 'master'
 
 jobs:
   actions-tagger:
