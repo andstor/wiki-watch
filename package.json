@@ -1,0 +1,22 @@
+{
+  "name": "wiki-watch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andstor/wiki-watch.git"
+  },
+  "author": "André Storhaug",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/andstor/wiki-watch/issues"
+  },
+  "homepage": "https://github.com/andstor/wiki-watch#readme",
+  "dependencies": {
+    "backstopjs": "^5.0.6"
+  }
+}
