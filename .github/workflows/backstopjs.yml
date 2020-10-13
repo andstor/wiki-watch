@@ -1,4 +1,4 @@
-name: Update version tag
+name: BackstopJS
 
 on:
   push:
