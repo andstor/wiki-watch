@@ -9,15 +9,18 @@ jobs:
   actions-tagger:
     runs-on: ubuntu-latest
     steps:
-      - run: pwd
-      
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - run: pwd
-
       - uses: andstor/backstopjs-action@master
+        id: backstopjs
         with:
           command: test
-      - run: ls backstop_data
+      - name: Deploy
+        
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./${{steps.backstopjs.outputs.backstopjs-dir}}
+          force_orphan: true
 
