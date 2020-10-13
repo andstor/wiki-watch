@@ -9,6 +9,13 @@ jobs:
   actions-tagger:
     runs-on: ubuntu-latest
     steps:
+      - run: pwd
+      
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - run: pwd
+
       - uses: andstor/backstopjs-action@master
         with:
           command: test
