@@ -6,4 +6,5 @@ module.exports = async (page, scenario, vp) => {
   await page.type('#user_id', 'process.env.USERNAME');
   await page.type('#password', 'process.env.PASSWORD');
   await page.$eval('#entry-login', elem => elem.click());
+  await page.waitFor(3000);
 };
