@@ -15,8 +15,8 @@ jobs:
       - uses: andstor/backstopjs-action@master
         id: backstopjs
         env:
-          BB_USERNAME: ${{ secrets.USERNAME }}
-          BB_PASSWORD: ${{ secrets.PASSWORD }}
+          BB_USERNAME: ${{ secrets.BB_USERNAME }}
+          BB_PASSWORD: ${{ secrets.BB_PASSWORD }}
         with:
           command: test
       - name: Deploy
