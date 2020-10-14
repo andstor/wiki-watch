@@ -36,7 +36,8 @@
     },
     {
       "label":  "Innføring i dannelse",
-      "url": "https://ntnu.blackboard.com/webapps/blackboard/execute/launcher?type=Course&id=_8415_1&url="
+      "url": "https://ntnu.blackboard.com/webapps/blackboard/execute/launcher?type=Course&id=_8415_1&url=",
+      "delay": 3000
     }
   ],
   "paths": {
