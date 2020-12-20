@@ -11,7 +11,7 @@ on:
         required: false
 
 jobs:
-  actions-tagger:
+  BackstopJS:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
