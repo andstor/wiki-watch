@@ -17,6 +17,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Checkout tools repo
+        uses: actions/checkout@v2
+        with:
+          repository: andstor/wiki-watch
+          path: previous-tests
+          ref: gh-pages
+
+      - run: |
+          cp -rf ./previous-tests/backstop_data/bitmaps_test/ ./backstop_data/bitmaps_test/
+      
       - uses: andstor/backstopjs-action@master
         id: backstopjs
         env:
