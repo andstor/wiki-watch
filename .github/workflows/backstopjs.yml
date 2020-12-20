@@ -27,7 +27,7 @@ jobs:
           filter: ${{ github.event.inputs.filter }}
 
       - run: |
-          git add ./${{steps.backstopjs.outputs.backstopjs-dir}}/bitmaps_reference
+          git add ./${{steps.backstopjs.outputs.backstopjs-dir}}/bitmaps_reference/
           git commit -m "Update reference bitmaps"
           git push
 
