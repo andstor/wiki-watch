@@ -25,7 +25,7 @@ jobs:
           ref: gh-pages
 
       - run: |
-          cp -rf ./previous-tests/backstop_data/bitmaps_test/ ./backstop_data/bitmaps_test/
+          cp -rf ./previous-tests/bitmaps_test/ ./backstop_data/bitmaps_test/
       
       - uses: andstor/backstopjs-action@master
         id: backstopjs
