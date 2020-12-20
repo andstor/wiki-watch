@@ -1,9 +1,14 @@
 name: BackstopJS
 
 on:
-  push:
-    branches:
-      - 'master'
+  workflow_dispatch:
+    inputs:
+      command:
+        description: 'BackstopJS command to run'
+        required: true
+      filter:
+        description: 'filter'
+        required: false
 
 jobs:
   actions-tagger:
@@ -18,7 +23,8 @@ jobs:
           BB_USERNAME: ${{ secrets.BB_USERNAME }}
           BB_PASSWORD: ${{ secrets.BB_PASSWORD }}
         with:
-          command: test
+          command: ${{ github.event.inputs.command }}
+          filter: ${{ github.event.inputs.filter }}
       - name: Deploy
         
         uses: peaceiris/actions-gh-pages@v3
