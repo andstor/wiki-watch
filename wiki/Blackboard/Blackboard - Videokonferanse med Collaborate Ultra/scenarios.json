@@ -1,0 +1,14 @@
+{
+  "scenarios": [
+    {
+      "label":  "Blackboard - Videokonferanse med Collaborate Ultra",
+      "url": "https://ntnu.blackboard.com/webapps/collab-ultra/tool/collabultra?course_id=_8415_1&mode=view",
+      "delay": 3000
+    },
+    {
+      "label":  "Innføring i dannelse",
+      "url": "https://ntnu.blackboard.com/webapps/blackboard/execute/launcher?type=Course&id=_8415_1&url=",
+      "delay": 3000
+    }
+  ]
+}
