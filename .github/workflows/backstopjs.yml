@@ -35,6 +35,12 @@ jobs:
         with:
           command: ${{ github.event.inputs.command }}
           filter: ${{ github.event.inputs.filter }}
+          configFile: ./backstop.config.js
+
+      - run: |
+          cp -rf ./compare-app/build/ ./${{steps.backstopjs.outputs.backstopjs-dir}}/html_report
+          node ./scripts/report.js
+          cp -rf ./config.js ./${{steps.backstopjs.outputs.backstopjs-dir}}/html_report/config.js
 
       - run: |
           git config user.name github-actions
